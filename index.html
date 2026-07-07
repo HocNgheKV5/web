@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIET-TECH | Cửa hàng điện thoại hiện đại</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a class="logo" href="#">VIET-TECH</a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#products">Sản phẩm</a>
+                <a href="#booking">Đặt mua</a>
+                <a href="#contact">Liên hệ</a>
+                <a href="#service">Dịch vụ</a>
+            </div>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <div class="cart-wrapper">
+                    <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span id="cartCount">0</span>
+                    </button>
+                    <div class="cart-dropdown" id="cartDropdown">
+                        <h4>Giỏ hàng</h4>
+                        <div id="cartItems" class="cart-items">
+                            <p class="empty-cart">Chưa có sản phẩm</p>
+                        </div>
+                        <div class="cart-footer">
+                            <div class="cart-total">Tổng cộng: <span id="cartTotal">0đ</span></div>
+                            <button class="btn btn-dark full">Thanh toán</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow">Tuyệt tác 2026</p>
+                    <h1>Trải nghiệm <span>đỉnh cao</span> công nghệ</h1>
+                    <p class="hero-desc">Khám phá smartphone chính hãng, thiết kế tối giản, hiệu năng mạnh mẽ, bảo hành rõ ràng và giao hàng toàn quốc.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-dark" href="#products">Khám phá ngay</a>
+                        <a class="btn btn-light" href="#booking">Đặt hàng trước</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div><strong>99%</strong><small>khách hài lòng</small></div>
+                        <div><strong>24h</strong><small>giao nội thành</small></div>
+                        <div><strong>12T</strong><small>bảo hành</small></div>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <img src="images/hero.jpg" alt="Điện thoại flagship cao cấp">
+                </div>
+            </div>
+        </section>
+
+        <section class="filters" aria-label="Danh mục sản phẩm">
+            <button class="filter active" data-filter="all">Tất cả</button>
+            <button class="filter" data-filter="iphone">iPhone</button>
+            <button class="filter" data-filter="samsung">Samsung</button>
+            <button class="filter" data-filter="xiaomi">Xiaomi</button>
+            <button class="filter" data-filter="phukien">Phụ kiện</button>
+        </section>
+
+        <section class="products section" id="products">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Sản phẩm nổi bật</p>
+                        <h2>Điện thoại bán chạy</h2>
+                    </div>
+                    <p>Tuyển chọn thiết bị mạnh mẽ, ảnh đẹp, pin bền, giá tốt.</p>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card reveal" data-category="iphone" data-name="iPhone 15 Pro Max" data-price="32990000" data-image="images/iphone.jpg">
+                        <div class="product-img"><img src="images/iphone.jpg" alt="iPhone 15 Pro Max"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>iPhone 15 Pro Max</h3><span>Mới</span></div>
+                            <p>Titanium đen • 256GB • A17 Pro</p>
+                            <div class="product-bottom"><strong>32.990.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal" data-category="samsung" data-name="Galaxy S24 Ultra" data-price="28490000" data-image="images/samsung.jpg">
+                        <div class="product-img"><img src="images/samsung.jpg" alt="Galaxy S24 Ultra"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>Galaxy S24 Ultra</h3></div>
+                            <p>Titan xám • 512GB • Snapdragon 8 Gen 3</p>
+                            <div class="product-bottom"><strong>28.490.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal" data-category="samsung" data-name="Galaxy Z Fold5" data-price="35990000" data-image="images/fold.jpg">
+                        <div class="product-img"><img src="images/fold.jpg" alt="Galaxy Z Fold5"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>Galaxy Z Fold5</h3></div>
+                            <p>Xanh icy • 256GB • Màn hình gập 7.6 inch</p>
+                            <div class="product-bottom"><strong>35.990.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal" data-category="phukien" data-name="AirPods Max" data-price="12490000" data-image="images/airpods.jpg">
+                        <div class="product-img"><img src="images/airpods.jpg" alt="AirPods Max"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>AirPods Max</h3></div>
+                            <p>Silver • Chống ồn chủ động • Âm thanh không gian</p>
+                            <div class="product-bottom"><strong>12.490.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal" data-category="phukien" data-name="Apple Watch Ultra 2" data-price="20190000" data-image="images/watch.jpg">
+                        <div class="product-img"><img src="images/watch.jpg" alt="Apple Watch Ultra 2"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>Apple Watch Ultra 2</h3></div>
+                            <p>Titanium • LTE • GPS • 49mm</p>
+                            <div class="product-bottom"><strong>20.190.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card reveal" data-category="xiaomi" data-name="Xiaomi 14 Ultra" data-price="24990000" data-image="images/xiaomi.jpg">
+                        <div class="product-img"><img src="images/xiaomi.jpg" alt="Xiaomi 14 Ultra"></div>
+                        <div class="product-info">
+                            <div class="product-title"><h3>Xiaomi 14 Ultra</h3></div>
+                            <p>Trắng • 12GB RAM • Leica Camera</p>
+                            <div class="product-bottom"><strong>24.990.000đ</strong><button class="detail-btn">Chi tiết</button></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="promo section" id="service">
+            <div class="container promo-box reveal">
+                <div>
+                    <p class="eyebrow">Dịch vụ premium</p>
+                    <h2>Thu cũ đổi mới, lên đời dễ dàng</h2>
+                    <p>Định giá minh bạch, hỗ trợ trả góp 0%, chuyển dữ liệu miễn phí khi mua máy mới tại cửa hàng.</p>
+                </div>
+                <a class="btn btn-blue" href="#booking">Nhận tư vấn</a>
+            </div>
+        </section>
+
+        <section class="booking section" id="booking">
+            <div class="container">
+                <div class="section-head center">
+                    <p class="eyebrow">Đặt mua & hẹn lịch</p>
+                    <h2>Chúng tôi sẵn sàng phục vụ bạn</h2>
+                    <p>Điền thông tin, nhân viên sẽ liên hệ xác nhận trong vài phút.</p>
+                </div>
+
+                <div class="form-grid">
+                    <form class="form-card reveal" id="visitForm">
+                        <div class="form-title"><span class="material-symbols-outlined">storefront</span><h3>Trải nghiệm tại cửa hàng</h3></div>
+                        <div class="form-row">
+                            <label>Họ và tên<input type="text" name="name" placeholder="Nguyễn Văn A" required></label>
+                            <label>Số điện thoại<input type="tel" name="phone" placeholder="0901 234 xxx" required></label>
+                        </div>
+                        <div class="form-row">
+                            <label>Ngày hẹn<input type="date" name="date" required></label>
+                            <label>Địa điểm<select name="store"><option>Hà Nội - Hai Bà Trưng</option><option>TP.HCM - Quận 1</option><option>Đà Nẵng - Hải Châu</option></select></label>
+                        </div>
+                        <button class="btn btn-dark full" type="submit">Xác nhận đặt lịch</button>
+                    </form>
+
+                    <form class="form-card reveal" id="orderForm">
+                        <div class="form-title"><span class="material-symbols-outlined">local_shipping</span><h3>Đặt mua online nhanh</h3></div>
+                        <label>Họ và tên<input type="text" name="name" placeholder="Trần Thị B" required></label>
+                        <div class="form-row">
+                            <label>Số điện thoại<input type="tel" name="phone" placeholder="0988 555 xxx" required></label>
+                            <label>Chọn dòng máy<select name="product"><option>iPhone 15 Pro Max</option><option>Galaxy S24 Ultra</option><option>Galaxy Z Fold5</option><option>Xiaomi 14 Ultra</option></select></label>
+                        </div>
+                        <label>Địa chỉ giao hàng<textarea name="address" placeholder="Số nhà, tên đường, phường/xã..." required></textarea></label>
+                        <button class="btn btn-blue full" type="submit">Hoàn tất đơn hàng</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <p class="eyebrow">Liên hệ</p>
+                    <h2>VIET-TECH luôn hỗ trợ 24/7</h2>
+                    <p>Giải đáp mọi thắc mắc về sản phẩm, bảo hành, trả góp và giao hàng.</p>
+                    <ul>
+                        <li><span class="material-symbols-outlined">location_on</span>123 Phố Công Nghệ, Hai Bà Trưng, Hà Nội</li>
+                        <li><span class="material-symbols-outlined">call</span>1800 1234 miễn phí</li>
+                        <li><span class="material-symbols-outlined">mail</span>support@viet-tech.vn</li>
+                    </ul>
+                </div>
+                <div class="map reveal"><img src="images/map.jpg" alt="Bản đồ cửa hàng VIET-TECH"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div><a class="logo" href="#">VIET-TECH</a><p>© 2026 VIET-TECH. Công nghệ chính hãng cho người Việt.</p></div>
+            <div class="footer-links"><a href="#">Chính sách bảo mật</a><a href="#">Điều khoản</a><a href="#contact">Liên hệ</a></div>
+        </div>
+    </footer>
+
+    <div class="modal" id="productModal" aria-hidden="true">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose" aria-label="Đóng"><span class="material-symbols-outlined">close</span></button>
+            <div class="modal-img"><img id="modalImage" src="images/detail.jpg" alt="Chi tiết sản phẩm"></div>
+            <div class="modal-content">
+                <p class="eyebrow">Chi tiết sản phẩm</p>
+                <h2 id="modalName">iPhone 15 Pro Max</h2>
+                <p id="modalDesc">Máy chính hãng, hiệu năng mạnh, camera sắc nét, pin bền, hỗ trợ trả góp và bảo hành 12 tháng.</p>
+                <div class="spec-list">
+                    <div><span>Màn hình</span><strong>OLED cao cấp</strong></div>
+                    <div><span>Bộ nhớ</span><strong>256GB / 512GB</strong></div>
+                    <div><span>Bảo hành</span><strong>12 tháng chính hãng</strong></div>
+                </div>
+                <strong class="modal-price" id="modalPrice">32.990.000đ</strong>
+                <div class="modal-actions">
+                    <button class="btn btn-dark" id="buyNowBtn">Mua ngay</button>
+                    <button class="btn btn-light" id="addCartBtn">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>
